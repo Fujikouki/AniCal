@@ -1,35 +1,20 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# AniCal
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+## 📌 アプリ概要
+AniCal は、今期放送中のアニメを効率的に管理・視聴できるアプリです。
+視聴記録の保存、人気アニメの取得、リマインド通知などを通して、アニメライフをサポートします。
 
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+## 💻 対応デバイス
+- Android スマートフォン（Android 7.0（API 24）以上）
+- iOS デバイス
 
-### Build and Run Android Application
+## 🛠️ 使用ライブラリ
 
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
-
-### Build and Run iOS Application
-
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
-
----
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+- [Kotlin Multiplatform](https://kotlinlang.org/docs/multiplatform.html)
+- [JetBrains Compose Multiplatform](https://www.jetbrains.com/lp/compose-multiplatform/)
+- [AndroidX Core KTX](https://developer.android.com/jetpack/androidx/releases/core)
+- [AndroidX AppCompat](https://developer.android.com/jetpack/androidx/releases/appcompat)
+- [AndroidX Activity Compose](https://developer.android.com/jetpack/androidx/releases/activity)
+- [AndroidX Lifecycle (ViewModel/Runtime Compose)](https://developer.android.com/jetpack/androidx/releases/lifecycle)
+- [JUnit](https://junit.org/junit4/)
+- [Kotlin Test](https://kotlinlang.org/api/latest/kotlin.test/)
